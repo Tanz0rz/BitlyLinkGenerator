@@ -31,7 +31,8 @@ func CreateLink(domain, LinkDestination, auth string) (string, error) {
 
 	defaultGroupIdMarshaled, err := requests.ExecuteRequest(request)
 	if err != nil {
-		return "", fmt.Errorf("Http request error: %+v\n", err)
+		// This error comes back blank sometimes, so I am printing it with both levels of verbosity
+		return "", fmt.Errorf("Http request error: %v:%+v\n", err, err)
 	}
 
 	var linkCreationResponse models.BitlyLinkCreateResponse
