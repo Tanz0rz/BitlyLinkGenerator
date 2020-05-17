@@ -1,0 +1,95 @@
+[
+  {
+    "name": "Brawnfire",
+    "jam_page": "https://ldjam.com/events/ludum-dare/46/brawnfire",
+    "ost": "https://bitdecaygames.bandcamp.com/album/brawnfire-ost-ludum-dare-46",
+    "github":  "https://github.com/bitDecayGames/LudumDare46"
+  },
+  {
+    "name": "FrogenFrone",
+    "jam_page": "https://gm48.net/game/1368/frogen-frone",
+    "ost": "https://bitdecaygames.bandcamp.com/album/frogen-frone-ost-gm48-32",
+    "github":  "https://github.com/bitDecayGames/GM48Oct2019"
+  },
+  {
+    "name": "RaginRacers",
+    "jam_page": "https://ldjam.com/events/ludum-dare/45/ragin-racers",
+    "github":  "https://github.com/bitDecayGames/LudumDare45"
+  },
+  {
+    "name": "KaBob",
+    "jam_page": "https://bitdecaygames.itch.io/ka-bob",
+    "ost": "https://bitdecaygames.bandcamp.com/album/ka-bob-ost-gmtk-game-jam-2019",
+    "github": "https://github.com/bitDecayGames/GamemakersToolkit2019",
+    "itch_io": "https://bitdecaygames.itch.io/ka-bob"
+  },
+  {
+    "name": "2ndBank",
+    "jam_page": "https://ldjam.com/events/ludum-dare/44/2nd-bank",
+    "ost": "https://bitdecaygames.bandcamp.com/album/2nd-bank-ost-ludum-dare-44",
+    "github": "https://github.com/bitDecayGames/LudumDare44"
+  },
+  {
+    "name": "LightFight",
+    "jam_page": "https://globalgamejam.org/2019/games/light-fight",
+    "ost": "https://bitdecaygames.bandcamp.com/album/light-fight-ost-global-game-jam-2019",
+    "github": "https://github.com/bitDecayGames/GlobalGameJam2019"
+  },
+  {
+    "name": "Roustabout",
+    "jam_page": "https://ldjam.com/events/ludum-dare/43/roustabout",
+    "ost": "https://bitdecaygames.bandcamp.com/album/roustabout-ost-ludum-dare-43",
+    "github": "https://github.com/bitDecayGames/LudumDare43",
+    "itch_io": "https://bitdecaygames.itch.io/roustabout"
+  },
+  {
+    "name": "EventfulHorizon",
+    "jam_page": "https://ldjam.com/events/ludum-dare/42/eventful-horizon",
+    "ost": "https://bitdecaygames.bandcamp.com/album/eventful-horizon-ost-ludum-dare-42",
+    "github": "https://github.com/bitDecayGames/LudumDare42",
+    "itch_io": "https://bitdecaygames.itch.io/eventful-horizon"
+  },
+  {
+    "name": "Tanxz",
+    "jam_page": "https://ldjam.com/events/ludum-dare/41/tanxz",
+    "ost": "https://bitdecaygames.bandcamp.com/album/tanxz-ost-ludum-dare-41",
+    "github": "https://github.com/bitDecayGames/LudumDare41"
+  },
+  {
+    "name": "PowerPanic",
+    "jam_page": "https://globalgamejam.org/2018/games/power-panic",
+    "ost": "https://bitdecaygames.bandcamp.com/album/power-panic-ost-global-game-jam-2018",
+    "github": "https://github.com/bitDecayGames/GlobalGameJam2018",
+    "itch_io": "https://bitdecaygames.itch.io/power-panic"
+  },
+  {
+    "name": "Deep",
+    "jam_page": "https://globalgamejam.org/2017/games/deep-0",
+    "github": "https://github.com/bitDecayGames/GlobalGameJam2017"
+  },
+  {
+    "name": "TooManyCooks",
+    "jam_page": "https://ldjam.com/events/ludum-dare/40/too-many-cooks-2"
+  },
+  {
+    "name": "BelarusePanic",
+    "jam_page": "https://ldjam.com/events/ludum-dare/38/belaruse-panic",
+    "github": "https://github.com/bitDecayGames/LudumDare38"
+  },
+  {
+    "name": "Tarant",
+    "jam_page": "https://globalgamejam.org/2016/games/tarant"
+  },
+  {
+    "name": "Quadramaniacs",
+    "jam_page": "https://globalgamejam.org/2015/games/quadramaniacs"
+  },
+  {
+    "name": "OfficeLife",
+    "jam_page": "https://globalgamejam.org/2014/games/office-life"
+  },
+  {
+    "name": "Rehab",
+    "jam_page": "http://2013.globalgamejam.org/2013/they-tried-make-me-go-rehab"
+  }
+]
