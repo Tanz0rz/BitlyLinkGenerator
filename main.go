@@ -94,13 +94,13 @@ func CreateJamPageLink(gameName, jamPage string) error {
 	}
 
 	// Create the lower case custom backhalf version
-	err = requests.SetCustomBackHalf(bitlink, Domain, strings.ToLower(gameName), "", AuthKey)
+	err = requests.SetCustomBackHalf(bitlink, Domain, strings.ToLower(gameName), constants.NoSuffix, AuthKey)
 	if err != nil {
 		return fmt.Errorf("Unable to create custom bitlink for %v: %v\n", gameName, err)
 	}
 
 	// Create the normal case custom backhalf version
-	err = requests.SetCustomBackHalf(bitlink, Domain, gameName, "", AuthKey)
+	err = requests.SetCustomBackHalf(bitlink, Domain, gameName, constants.NoSuffix, AuthKey)
 	if err != nil {
 		return fmt.Errorf("Unable to create custom bitlink for %v: %v\n", gameName, err)
 	}

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/TannerMoore/BitlyCodeChallenge/requests"
+	"github.com/TannerMoore/BitlyGameLinkGenerator/models"
 	"net/http"
 	"time"
 )
@@ -12,7 +13,7 @@ import (
 func CreateLink(domain, LinkDestination, auth string) (string, error) {
 	bitlyUserEndpoint := "https://api-ssl.bitly.com/v4/bitlinks"
 
-	requestBody := BitlyLinkCreateRequest{
+	requestBody := models.BitlyLinkCreateRequest{
 		Domain: domain,
 		LongUrl: LinkDestination,
 	}
@@ -33,7 +34,7 @@ func CreateLink(domain, LinkDestination, auth string) (string, error) {
 		return "", fmt.Errorf("Http request error: %+v\n", err)
 	}
 
-	var linkCreationResponse BitlyLinkCreateResponse
+	var linkCreationResponse models.BitlyLinkCreateResponse
 	err = json.Unmarshal(defaultGroupIdMarshaled, &linkCreationResponse)
 	if err != nil {
 		return "", err

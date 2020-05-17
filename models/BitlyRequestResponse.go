@@ -1,4 +1,4 @@
-package requests
+package models
 
 type BitlyLinkCreateRequest struct {
 	Domain string `json:"domain"`

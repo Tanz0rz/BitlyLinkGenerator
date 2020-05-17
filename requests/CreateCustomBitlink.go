@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/TannerMoore/BitlyCodeChallenge/requests"
+	"github.com/TannerMoore/BitlyGameLinkGenerator/models"
 	"net/http"
 	"time"
 )
@@ -12,7 +13,7 @@ import (
 func SetCustomBackHalf(bitlink, domain, gameName, linkName, auth string) error {
 	bitlyUserEndpoint := fmt.Sprintf("https://api-ssl.bitly.com/v4/custom_bitlinks/%v/%v%v", domain, gameName, linkName)
 
-	requestBody := BitlyCustomLinkCreateRequest{
+	requestBody := models.BitlyCustomLinkCreateRequest{
 		BitlinkId: bitlink,
 	}
 
@@ -32,7 +33,7 @@ func SetCustomBackHalf(bitlink, domain, gameName, linkName, auth string) error {
 		return err
 	}
 
-	var customLinkCreateResponse BitlyCustomLinkCreateResponse
+	var customLinkCreateResponse models.BitlyCustomLinkCreateResponse
 	err = json.Unmarshal(defaultGroupIdMarshaled, &customLinkCreateResponse)
 	if err != nil {
 		return err
