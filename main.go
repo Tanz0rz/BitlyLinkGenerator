@@ -50,6 +50,7 @@ func main() {
 			err := CreateJamPageLink(game.Name, game.JamPage)
 			if err != nil {
 				fmt.Println(err)
+				os.Exit(1)
 			}
 			time.Sleep(1 * time.Second)
 		}
@@ -59,6 +60,7 @@ func main() {
 			err := CreateGameContentLinks(game.Name, game.Github, constants.Github)
 			if err != nil {
 				fmt.Println(err)
+				os.Exit(1)
 			}
 			time.Sleep(1 * time.Second)
 		}
@@ -68,6 +70,7 @@ func main() {
 			err := CreateGameContentLinks(game.Name, game.Ost, constants.Ost)
 			if err != nil {
 				fmt.Println(err)
+				os.Exit(1)
 			}
 			time.Sleep(1 * time.Second)
 		}
@@ -77,6 +80,7 @@ func main() {
 			err := CreateGameContentLinks(game.Name, game.ItchIo, constants.ItchIo)
 			if err != nil {
 				fmt.Println(err)
+				os.Exit(1)
 			}
 			time.Sleep(1 * time.Second)
 		}
