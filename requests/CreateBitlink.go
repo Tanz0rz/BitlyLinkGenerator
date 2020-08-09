@@ -1,7 +1,6 @@
 package requests
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"github.com/TannerMoore/BitlyCodeChallenge/requests"
@@ -11,19 +10,11 @@ import (
 )
 
 func CreateLink(domain, LinkDestination, auth string) (string, error) {
-	bitlyUserEndpoint := "https://api-ssl.bitly.com/v4/bitlinks"
+	bitlyUserEndpoint := "https://api-ssl.bitly.com/v3/user/link_save"
+	parameters := fmt.Sprintf("access_token=%s&longUrl=%s&domain=%s", auth, LinkDestination, domain)
+	requestPath := fmt.Sprintf("%s?%s", bitlyUserEndpoint, parameters)
 
-	requestBody := models.BitlyLinkCreateRequest{
-		Domain: domain,
-		LongUrl: LinkDestination,
-	}
-
-	requestBodyMarshalled, err := json.Marshal(requestBody)
-	if err != nil {
-		return "", err
-	}
-
-	request, err := http.NewRequest("POST", bitlyUserEndpoint, bytes.NewBuffer(requestBodyMarshalled))
+	request, err := http.NewRequest("GET", requestPath, nil)
 	if err != nil {
 		return "", err
 	}
@@ -35,7 +26,7 @@ func CreateLink(domain, LinkDestination, auth string) (string, error) {
 		return "", fmt.Errorf("Http request error: %v:%+v\n", err, err)
 	}
 
-	var linkCreationResponse models.BitlyLinkCreateResponse
+	var linkCreationResponse models.BitlyLinkCreateResponseV3
 	err = json.Unmarshal(defaultGroupIdMarshaled, &linkCreationResponse)
 	if err != nil {
 		return "", err
@@ -44,5 +35,6 @@ func CreateLink(domain, LinkDestination, auth string) (string, error) {
 	// Sleep after each request or we will get rate limited by Bitly
 	time.Sleep(1 * time.Second)
 
-	return linkCreationResponse.Id, nil
+	linkIdRaw := linkCreationResponse.Data.LinkSave.Link
+	return linkIdRaw[8:], nil
 }
